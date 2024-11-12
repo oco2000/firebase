@@ -1,9 +1,9 @@
 import { createContext, useEffect, useState } from "react";
-import { auth, signIn, signOut } from "./firebase";
+import { auth, signIn, signOut } from "../firebase/firebase";
 
 const AuthContext = createContext<any>({});
 
-const AuthProvider = ({ children }) => {
+const AuthProvider: React.FC<any> = ({ children }) => {
   const [user, setUser] = useState<any>(null);
   const [loading, setLoading] = useState(true);
 

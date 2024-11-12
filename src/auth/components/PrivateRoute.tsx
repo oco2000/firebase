@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../AuthContext";
 import { Navigate } from "react-router-dom";
 
-const PrivateRoute = ({ children }) => {
+const PrivateRoute: React.FC<any> = ({ children }) => {
   const { loading, user } = useContext(AuthContext);
 
   if (loading) {
